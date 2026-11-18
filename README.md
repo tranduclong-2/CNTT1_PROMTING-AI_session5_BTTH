@@ -1,43 +1,92 @@
-# PROMPT: LẬP KẾ HOẠCH TÀI CHÍNH CÁ NHÂN BẰNG CHAIN-OF-THOUGHT
+# LẬP KẾ HOẠCH TÀI CHÍNH CÁ NHÂN BẰNG CoT
 
 **1. Context (Bối cảnh):**
 
-Tôi muốn lập kế hoạch tài chính cá nhân hàng tháng dựa trên thu nhập, chi phí cố định, các khoản nợ và mục tiêu tiết kiệm.
+Tôi là một người đang đi làm, có thu nhập hàng tháng không ổn định và một số khoản nợ cần thanh toán. Tôi muốn quản lý tài chính để đảm bảo chi tiêu, trả nợ và tiết kiệm.
 
 **2. Request (Yêu cầu):**
 
-Hãy lập kế hoạch phân bổ ngân sách hợp lý, đảm bảo trả nợ đúng hạn, tiết kiệm tối thiểu 20% và duy trì quỹ dự phòng.
+Hãy lập kế hoạch tài chính hàng tháng, tối ưu hóa dòng tiền, đảm bảo trả nợ đúng hạn, tiết kiệm tối thiểu 20% và xây dựng quỹ dự phòng.
 
-**3. Reasoning (Quy trình xử lý):**
+**3. Input (Dữ liệu đầu vào):**
 
-Hãy suy nghĩ từng bước một và tính toán chi tiết trước khi đưa ra quyết định. Thực hiện các bước:
+- Thu nhập tháng này: 15.000.000 VNĐ.
+- Thuế và khấu trừ: 1.000.000 VNĐ.
+- Chi phí cố định: 4.000.000 VNĐ.
+- Nợ ngân hàng: 2.000.000 VNĐ/tháng.
+- Nợ cá nhân: 1.000.000 VNĐ/tháng.
+- Mục tiêu tiết kiệm: 20% thu nhập sau thuế.
+- Quỹ dự phòng hiện có: 2.000.000 VNĐ.
+
+**4. Reasoning (Quy trình xử lý):**
+
+Hãy suy nghĩ từng bước một và tính toán chi tiết trước khi đưa ra quyết định.
 
 - Bước 1: Tính thu nhập sau thuế và trừ chi phí cố định.
-- Bước 2: Tính tổng các khoản nợ và phân bổ tiền trả nợ tối thiểu.
-- Bước 3: Trích lập tiết kiệm ít nhất 20% thu nhập.
-- Bước 4: Phân bổ số tiền còn lại theo quy tắc 50/30/20 cải tiến, ưu tiên nhu cầu thiết yếu, mong muốn cá nhân và quỹ dự phòng.
+- Bước 2: Tính tổng tiền trả nợ tối thiểu.
+- Bước 3: Trích lập khoản tiết kiệm tối thiểu 20% thu nhập sau thuế.
+- Bước 4: Phân bổ số tiền còn lại theo quy tắc 50/30/20 cải tiến, gồm nhu cầu thiết yếu, mong muốn cá nhân và quỹ dự phòng.
 
-**4. Output (Định dạng đầu ra):**
+**5. Output (Đầu ra):**
 
-Trình bày kết quả thành 2 phần:
+Trình bày thành hai phần:
 
-- Phần 1: Các bước tính toán logic, nêu công thức và số liệu trung gian.
+- Phần 1: Các bước tính toán logic, công thức và số liệu trung gian.
 - Phần 2: Bảng Markdown gồm các cột: Hạng mục, Số tiền, Tỷ lệ %, Ghi chú.
 
-**5. Constraints (Ràng buộc):**
+**6. Constraints (Ràng buộc):**
 
 - Hiển thị đầy đủ các phép tính cộng, trừ, nhân, chia.
-- Không tự ý bỏ qua dữ liệu hoặc giả định khi chưa có căn cứ.
-- Tổng tỷ lệ phân bổ ngân sách phải chính xác 100%.
-- Nếu thu nhập không đủ trả nợ và tiết kiệm, phải cảnh báo và đề xuất điều chỉnh.
-- Không sử dụng Python, Pydantic hay công cụ lập trình; chỉ sử dụng suy luận và tính toán logic.
-- Kiểm tra lại tổng số tiền và tỷ lệ phần trăm trước khi xuất kết quả.
+- Không bỏ sót khoản thu nhập, chi phí hoặc khoản nợ.
+- Tổng ngân sách phải bằng 100% thu nhập.
+- Nếu ngân sách không đủ, phải cảnh báo và đề xuất điều chỉnh.
+- Không sử dụng Python, Pydantic hay công cụ lập trình.
+- Kiểm tra lại số tiền và tỷ lệ phần trăm trước khi xuất kết quả.
 
-**6. Input (Dữ liệu đầu vào):**
+2. Phần 1: Nhật ký tính toán (Reasoning Steps)
+Bước 1: Tính thu nhập khả dụng
+- Thu nhập sau thuế: 15.000.000 - 1.000.000 = 14.000.000 VNĐ.
+- Sau chi phí cố định: 14.000.000 - 4.000.000 = 10.000.000 VNĐ.
+Bước 2: Phân bổ trả nợ
+- Tổng nợ: 2.000.000 + 1.000.000 = 3.000.000 VNĐ.
+- Số tiền còn lại: 10.000.000 - 3.000.000 = 7.000.000 VNĐ.
+Bước 3: Trích lập tiết kiệm
+- Tiết kiệm: 14.000.000 × 20% = 2.800.000 VNĐ.
+- Số tiền còn lại: 7.000.000 - 2.800.000 = 4.200.000 VNĐ.
 
-- Thu nhập hàng tháng: [Nhập số tiền]
-- Thuế và các khoản khấu trừ: [Nhập số tiền]
-- Chi phí cố định: [Nhập số tiền]
-- Các khoản nợ và hạn thanh toán: [Nhập chi tiết]
-- Mục tiêu tiết kiệm: [Nhập tỷ lệ hoặc số tiền]
-- Quỹ dự phòng hiện có: [Nhập số tiền]
+1. Bảng dữ liệu đầu vào
+
+| Hạng mục | Số tiền |
+|---|---:|
+| Thu nhập hàng tháng | 15.000.000 VNĐ |
+| Thuế và khấu trừ | 1.000.000 VNĐ |
+| Chi phí cố định | 4.000.000 VNĐ |
+| Nợ ngân hàng | 2.000.000 VNĐ |
+| Nợ cá nhân | 1.000.000 VNĐ |
+| Mục tiêu tiết kiệm | 20% |
+| Quỹ dự phòng hiện có | 2.000.000 VNĐ |
+
+
+2. Bảng phân bổ theo quy tắc 50/30/20
+
+| Hạng mục | Tỷ lệ | Công thức | Số tiền |
+|---|---:|---|---:|
+| Nhu cầu thiết yếu | 50% | 4.200.000 × 50% | 2.100.000 VNĐ |
+| Mong muốn cá nhân | 30% | 4.200.000 × 30% | 1.260.000 VNĐ |
+| Quỹ dự phòng | 20% | 4.200.000 × 20% | 840.000 VNĐ |
+| **Tổng cộng** | **100%** | | **4.200.000 VNĐ** |
+
+
+3. Bảng phân bổ ngân sách cuối cùng
+
+| Hạng mục | Số tiền (VNĐ) | Tỷ lệ % | Ghi chú |
+|---|---:|---:|---|
+| Thuế và khấu trừ | 1.000.000 | 6,67% | Khoản bắt buộc |
+| Chi phí cố định | 4.000.000 | 26,67% | Tiền nhà, điện nước |
+| Trả nợ ngân hàng | 2.000.000 | 13,33% | Thanh toán đúng hạn |
+| Trả nợ cá nhân | 1.000.000 | 6,67% | Thanh toán đúng hạn |
+| Tiết kiệm | 2.800.000 | 18,67% | 20% thu nhập sau thuế |
+| Nhu cầu thiết yếu | 2.100.000 | 14,00% | Ăn uống, đi lại |
+| Mong muốn cá nhân | 1.260.000 | 8,40% | Giải trí, mua sắm |
+| Quỹ dự phòng | 840.000 | 5,60% | Chi phí khẩn cấp |
+| **Tổng cộng** | **15.000.000** | **100,00%** | **Cân đối ngân sách** |
