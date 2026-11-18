@@ -44,6 +44,7 @@ Trình bày thành hai phần:
 - Kiểm tra lại số tiền và tỷ lệ phần trăm trước khi xuất kết quả.
 
 1. Bảng dữ liệu đầu vào
+
 | Hạng mục | Số tiền |
 |---|---:|
 | Thu nhập hàng tháng | 15.000.000 VNĐ |
