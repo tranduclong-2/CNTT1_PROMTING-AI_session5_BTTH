@@ -43,6 +43,17 @@ Trình bày thành hai phần:
 - Không sử dụng Python, Pydantic hay công cụ lập trình.
 - Kiểm tra lại số tiền và tỷ lệ phần trăm trước khi xuất kết quả.
 
+1. Bảng dữ liệu đầu vào
+| Hạng mục | Số tiền |
+|---|---:|
+| Thu nhập hàng tháng | 15.000.000 VNĐ |
+| Thuế và khấu trừ | 1.000.000 VNĐ |
+| Chi phí cố định | 4.000.000 VNĐ |
+| Nợ ngân hàng | 2.000.000 VNĐ |
+| Nợ cá nhân | 1.000.000 VNĐ |
+| Mục tiêu tiết kiệm | 20% |
+| Quỹ dự phòng hiện có | 2.000.000 VNĐ |
+
 2. Phần 1: Nhật ký tính toán (Reasoning Steps)
 Bước 1: Tính thu nhập khả dụng
 - Thu nhập sau thuế: 15.000.000 - 1.000.000 = 14.000.000 VNĐ.
@@ -54,20 +65,7 @@ Bước 3: Trích lập tiết kiệm
 - Tiết kiệm: 14.000.000 × 20% = 2.800.000 VNĐ.
 - Số tiền còn lại: 7.000.000 - 2.800.000 = 4.200.000 VNĐ.
 
-1. Bảng dữ liệu đầu vào
-
-| Hạng mục | Số tiền |
-|---|---:|
-| Thu nhập hàng tháng | 15.000.000 VNĐ |
-| Thuế và khấu trừ | 1.000.000 VNĐ |
-| Chi phí cố định | 4.000.000 VNĐ |
-| Nợ ngân hàng | 2.000.000 VNĐ |
-| Nợ cá nhân | 1.000.000 VNĐ |
-| Mục tiêu tiết kiệm | 20% |
-| Quỹ dự phòng hiện có | 2.000.000 VNĐ |
-
-
-2. Bảng phân bổ theo quy tắc 50/30/20
+3. Bảng phân bổ theo quy tắc 50/30/20
 
 | Hạng mục | Tỷ lệ | Công thức | Số tiền |
 |---|---:|---|---:|
@@ -76,8 +74,7 @@ Bước 3: Trích lập tiết kiệm
 | Quỹ dự phòng | 20% | 4.200.000 × 20% | 840.000 VNĐ |
 | **Tổng cộng** | **100%** | | **4.200.000 VNĐ** |
 
-
-3. Bảng phân bổ ngân sách cuối cùng
+4. Bảng phân bổ ngân sách cuối cùng
 
 | Hạng mục | Số tiền (VNĐ) | Tỷ lệ % | Ghi chú |
 |---|---:|---:|---|
